@@ -20,9 +20,72 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        int a;
+        int b;
+        int total;
         public MainWindow()
         {
             InitializeComponent();
+        }
+        
+        private void GetValues()
+        {
+            try
+            {
+                a = Convert.ToInt32(tbxFirstNum.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                b = Convert.ToInt32(tbxSecondNum.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            GetValues();
+            //Add the two numbers
+            
+            total = a + b;
+
+            lblResult.Content = total.ToString();
+        }
+
+        private void Substract(object sender, RoutedEventArgs e)
+        {
+            GetValues();
+            //Substacts the two numbers
+            total = a - b;
+
+            lblResult.Content = total.ToString();
+        }
+
+        private void Multiply(object sender, RoutedEventArgs e)
+        {
+            GetValues();
+            //Multiplies the two numbers
+            total = a * b;
+
+            lblResult.Content = total.ToString();
+        }
+
+        private void Divide(object sender, RoutedEventArgs e)
+        {
+            GetValues();
+            //Divides the two numbers
+            total = a / b;
+
+            lblResult.Content = total.ToString();
         }
     }
 }
