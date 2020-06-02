@@ -6,7 +6,32 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="Calculator App" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.357,0.483">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="20" FontWeight="SemiBold" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">SUPER CALCULATOR</Label>
+
+        <TextBox Name="tbxFirstNum" FontSize="22" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" Margin="250,45,450,45">00</TextBox>
+        <TextBox Name="tbxSecondNum" FontSize="22" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Height="Auto" Width="Auto" Margin="450,45,250,45">00</TextBox>
+
+
+        <Label Name="lblResult" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="22">Result</Label>
+
+        <Button Click="Add" Grid.Column="1" Grid.Row="2" FontSize="22" Width="40" Height="40" Margin="271,44,431,45">+</Button>
+        <Button Click="Substract" Grid.Column="1" Grid.Row="2" FontSize="22" Width="40" Height="40" Margin="326,44,376,45">-</Button>
+        <Button Click="Multiply" Grid.Column="1" Grid.Row="2" FontSize="22" Width="40" Height="40" Margin="381,44,321,45">*</Button>
+        <Button Click="Divide" Grid.Column="1" Grid.Row="2" FontSize="22" Width="40" Height="40" Margin="436,44,266,45">/</Button>
+           
+       
     </Grid>
 </Window>
