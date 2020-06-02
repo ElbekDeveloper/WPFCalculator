@@ -83,7 +83,15 @@ namespace Calculator
         {
             GetValues();
             //Divides the two numbers
-            total = a / b;
+            try
+            {
+                total = a / b;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Divider cannot be zero");
+            }
 
             lblResult.Content = total.ToString();
         }
